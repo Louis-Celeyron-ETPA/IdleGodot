@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="IdledGodot"
-run/main_scene="res://Nodes/UI/MainUI.tscn"
+run/main_scene="res://Nodes/Scenes/MainScene.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+ManagerManagerObject="*res://Nodes/Other/ManagerManagerObject.tscn"
 
 [dotnet]
 

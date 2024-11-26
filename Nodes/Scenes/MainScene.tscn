@@ -1,12 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmlsvmo7eqrcm"]
+[gd_scene load_steps=3 format=3 uid="uid://dmlsvmo7eqrcm"]
 
 [ext_resource type="PackedScene" uid="uid://dx3fd256t0700" path="res://Nodes/UI/MainUI.tscn" id="1_r1grw"]
+[ext_resource type="Script" path="res://Scripts/GameMaster.cs" id="2_ya5qh"]
 
-[node name="Node2D" type="Node2D"]
+[node name="MainScene" type="Node2D"]
 
 [node name="Control" parent="." instance=ExtResource("1_r1grw")]
-visible = false
-offset_left = 257.0
-offset_top = 259.0
-offset_right = 257.0
-offset_bottom = 259.0
+
+[node name="GameMaster" type="Node" parent="."]
+script = ExtResource("2_ya5qh")
+
+[connection signal="OnScoreChange" from="GameMaster" to="Control" method="UpdateScoreLabel"]
+
+[editable path="Control"]

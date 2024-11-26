@@ -1,11 +1,15 @@
 using Godot;
 using System;
 
-public partial class ButtonTesyt : Button
+public partial class ButtonTest : Button
 {
+
+	private ScoreManager _scoreManager;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		_scoreManager = ManagerManager.GetManager<ScoreManager>();
+
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -13,9 +17,11 @@ public partial class ButtonTesyt : Button
 	{
 	}
 
+
+
 	private void OnButtonDown()
 	{
-		GD.Print("Wesh");
+		_scoreManager.RiseScore(1);
 	}
 
 }
