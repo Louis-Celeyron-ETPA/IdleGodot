@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dx3fd256t0700"]
 
 [ext_resource type="Script" path="res://Scripts/UI/MainUi.cs" id="1_h42yt"]
-[ext_resource type="Script" path="res://Nodes/UI/ButtonTest.cs" id="2_qiuml"]
+[ext_resource type="Script" path="res://Scripts/UI/ButtonBridge.cs" id="2_qiuml"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6mogv"]
 font_size = 44
@@ -19,12 +19,21 @@ grow_vertical = 2
 script = ExtResource("1_h42yt")
 _scoreLabel = NodePath("Label")
 
-[node name="Button" type="Button" parent="."]
+[node name="RisePowerButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 455.0
-offset_top = 347.0
-offset_right = 681.0
-offset_bottom = 450.0
+offset_left = 21.0
+offset_top = 295.0
+offset_right = 247.0
+offset_bottom = 398.0
+text = "POWER"
+script = ExtResource("2_qiuml")
+
+[node name="RiseScoreButton2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 730.0
+offset_top = 301.0
+offset_right = 956.0
+offset_bottom = 404.0
 text = "Bouton"
 script = ExtResource("2_qiuml")
 
@@ -35,4 +44,5 @@ offset_bottom = 81.0
 text = "Score : 00"
 label_settings = SubResource("LabelSettings_6mogv")
 
-[connection signal="button_down" from="Button" to="Button" method="OnButtonDown"]
+[connection signal="button_down" from="RisePowerButton" to="RisePowerButton" method="Temp_Draw"]
+[connection signal="button_down" from="RiseScoreButton2" to="RiseScoreButton2" method="RiseScoreByPower"]

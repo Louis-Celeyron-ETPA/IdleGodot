@@ -35,9 +35,10 @@ public partial class ManagerManager : Node
                 _managers.Add(c);
             }
         }
+        InitializeManager();
     }
 
-    private void InitializeManage()
+    private void InitializeManager()
     {
         foreach (var manager in _managers)
         {
