@@ -1,11 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://dx3fd256t0700"]
+[gd_scene load_steps=7 format=3 uid="uid://dx3fd256t0700"]
 
 [ext_resource type="Script" path="res://Scripts/UI/MainUi.cs" id="1_h42yt"]
 [ext_resource type="Script" path="res://Scripts/UI/ButtonBridge.cs" id="2_qiuml"]
+[ext_resource type="PackedScene" uid="uid://5obhy2waqwgn" path="res://Nodes/UI/Duck_Button.tscn" id="3_rtlpd"]
+[ext_resource type="Resource" uid="uid://c5ifhj8kcw0vw" path="res://Poubelle/EnemyTest.tres" id="4_6bk23"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6mogv"]
 font_size = 44
-font_color = Color(0.793142, 0.264458, 0.174474, 1)
+font_color = Color(0.42855, 0.422629, 0.763543, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tj433"]
+font_size = 44
+font_color = Color(1, 0.445456, 0.734486, 1)
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
@@ -17,7 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_h42yt")
-_scoreLabel = NodePath("Label")
+_scoreLabel = NodePath("VBoxContainer/Label")
 
 [node name="RisePowerButton" type="Button" parent="."]
 layout_mode = 0
@@ -28,21 +36,35 @@ offset_bottom = 398.0
 text = "POWER"
 script = ExtResource("2_qiuml")
 
-[node name="RiseScoreButton2" type="Button" parent="."]
-layout_mode = 0
-offset_left = 730.0
-offset_top = 301.0
-offset_right = 956.0
-offset_bottom = 404.0
-text = "Bouton"
-script = ExtResource("2_qiuml")
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 202.0
+offset_bottom = 126.0
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_right = 761.0
-offset_bottom = 81.0
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
 text = "Score : 00"
 label_settings = SubResource("LabelSettings_6mogv")
 
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Gems : 00"
+label_settings = SubResource("LabelSettings_tj433")
+
+[node name="Button" parent="." instance=ExtResource("3_rtlpd")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(100, 100)
+_currentDuck = ExtResource("4_6bk23")
+
 [connection signal="button_down" from="RisePowerButton" to="RisePowerButton" method="Temp_Draw"]
-[connection signal="button_down" from="RiseScoreButton2" to="RiseScoreButton2" method="RiseScoreByPower"]

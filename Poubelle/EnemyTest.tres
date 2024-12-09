@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Duck" load_steps=2 format=3 uid="uid://c5ifhj8kcw0vw"]
+
+[ext_resource type="Script" path="res://Scripts/Ressources/Duck.cs" id="1_ah7le"]
+
+[resource]
+script = ExtResource("1_ah7le")
+BaseHp = 63
+GoldAmount = 63

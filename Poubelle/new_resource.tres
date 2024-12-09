@@ -9,5 +9,6 @@ _amount = 3
 
 [resource]
 script = ExtResource("1_nq0j5")
-Price = 0
+_price = 0
+_gemAmount = 0
 _events = Array[Object]([SubResource("Resource_5vgch")])

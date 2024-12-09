@@ -6,7 +6,8 @@ using System;
 [GlobalClass]
 public partial class Card : Resource
 {
-    [Export] public int Price;
+    [Export] private int _price;
+    [Export] private int _gemAmount;
     [Export] private Array<CardEvent> _events;
     
     public Card() : this(0)
@@ -16,7 +17,7 @@ public partial class Card : Resource
     
     public Card(int price)
     {
-        Price = price;
+        _price = price;
     }
 
     public void Draw(CardsManager cardsManager)

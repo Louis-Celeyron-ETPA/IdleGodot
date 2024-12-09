@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://5obhy2waqwgn"]
+
+[ext_resource type="Texture2D" uid="uid://c2n4d35qjkok7" path="res://Sprites/T_ClassicDuck.png" id="1_rflqg"]
+[ext_resource type="Texture2D" uid="uid://ht17jspivebp" path="res://Sprites/T_Heart.png" id="2_30nqs"]
+[ext_resource type="Texture2D" uid="uid://bmkfokuwnwp85" path="res://Sprites/T_OutlineSquare.png" id="2_gfy2p"]
+[ext_resource type="Script" path="res://Scripts/UI/DuckOnGame.cs" id="2_h3bl0"]
+
+[node name="Duck_Button" type="Button" node_paths=PackedStringArray("_loveBar")]
+offset_right = 200.0
+offset_bottom = 200.0
+icon = ExtResource("1_rflqg")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_h3bl0")
+_loveBar = NodePath("TextureProgressBar")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.162
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 11.04
+offset_bottom = 27.285
+grow_horizontal = 2
+grow_vertical = 2
+value = 67.0
+nine_patch_stretch = true
+stretch_margin_left = 10
+stretch_margin_top = 1
+stretch_margin_right = 10
+stretch_margin_bottom = 1
+texture_under = ExtResource("2_gfy2p")
+texture_progress = ExtResource("2_gfy2p")
+tint_under = Color(0.217331, 0.0019547, 0.0422491, 1)
+tint_over = Color(1, 0, 1, 1)
+tint_progress = Color(0.709804, 0.317647, 0.411765, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.711507, 0.318841, 0.411267, 1)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_right = 45.0
+offset_bottom = 40.0
+grow_vertical = 0
+texture = ExtResource("2_30nqs")
+expand_mode = 3

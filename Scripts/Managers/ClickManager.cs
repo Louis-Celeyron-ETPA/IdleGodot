@@ -6,7 +6,6 @@ public partial class ClickManager : Manager
 {
     private int _power = 1;
     private int _tempPower = 0;
-    
     public int GetPower()
     {
         return _power + _tempPower;
