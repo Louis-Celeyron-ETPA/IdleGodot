@@ -17,7 +17,7 @@ font_color = Color(1, 0.445456, 0.734486, 1)
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
-[node name="Control" type="Control" node_paths=PackedStringArray("_scoreLabel")]
+[node name="Control" type="Control" node_paths=PackedStringArray("_goldLabel", "_gemLabel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,7 +25,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_h42yt")
-_scoreLabel = NodePath("VBoxContainer/Label")
+_goldLabel = NodePath("VBoxContainer/Label")
+_gemLabel = NodePath("VBoxContainer/Label2")
 
 [node name="RisePowerButton" type="Button" parent="."]
 layout_mode = 0

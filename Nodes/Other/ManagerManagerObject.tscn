@@ -1,16 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqfjnmr41qsmd"]
+[gd_scene load_steps=8 format=3 uid="uid://bqfjnmr41qsmd"]
 
 [ext_resource type="Script" path="res://Scripts/Managers/ManagerManager.cs" id="1_2kg6h"]
-[ext_resource type="Script" path="res://Scripts/Managers/ScoreManager.cs" id="2_rf6jq"]
 [ext_resource type="Script" path="res://Scripts/Managers/ClickManager.cs" id="3_6u888"]
 [ext_resource type="Script" path="res://Scripts/Managers/CardsManager.cs" id="4_olgv3"]
 [ext_resource type="Resource" uid="uid://dtj4k5ng4w8a8" path="res://Poubelle/new_resource.tres" id="5_ag8rv"]
+[ext_resource type="Script" path="res://Scripts/Managers/DuckManager.cs" id="5_o0d17"]
+[ext_resource type="Resource" uid="uid://c5ifhj8kcw0vw" path="res://Poubelle/EnemyTest.tres" id="6_6sgxk"]
+[ext_resource type="Script" path="res://Scripts/Managers/GoldAndInventoryManager.cs" id="7_4mn8l"]
 
 [node name="ManagerManagerObject" type="Node"]
 script = ExtResource("1_2kg6h")
-
-[node name="ScoreManager" type="Node" parent="."]
-script = ExtResource("2_rf6jq")
 
 [node name="ClickManager" type="Node" parent="."]
 script = ExtResource("3_6u888")
@@ -18,3 +17,10 @@ script = ExtResource("3_6u888")
 [node name="CardsManager" type="Node" parent="."]
 script = ExtResource("4_olgv3")
 _cards = Array[Object]([ExtResource("5_ag8rv")])
+
+[node name="DuckManager" type="Node" parent="."]
+script = ExtResource("5_o0d17")
+_availableDucks = Array[Object]([ExtResource("6_6sgxk")])
+
+[node name="GoldAndInventoryManager" type="Node" parent="."]
+script = ExtResource("7_4mn8l")

@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Duck" load_steps=2 format=3 uid="uid://c5ifhj8kcw0vw"]
+[gd_resource type="Resource" script_class="Duck" load_steps=3 format=3 uid="uid://c5ifhj8kcw0vw"]
 
 [ext_resource type="Script" path="res://Scripts/Ressources/Duck.cs" id="1_ah7le"]
+[ext_resource type="Texture2D" uid="uid://c2n4d35qjkok7" path="res://Sprites/T_ClassicDuck.png" id="1_trau4"]
 
 [resource]
 script = ExtResource("1_ah7le")
-BaseHp = 63
+BaseLove = 12
+Sprite = ExtResource("1_trau4")
 GoldAmount = 63

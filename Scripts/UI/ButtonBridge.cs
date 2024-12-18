@@ -4,14 +4,14 @@ using System;
 public partial class ButtonBridge : Button
 {
 
-	private ScoreManager _scoreManager;
+	private GoldAndInventoryManager _goldAndInventoryManager;
 	private CardsManager _cardsManager;
 	private ClickManager _clickManager;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		_clickManager = ManagerManager.GetManager<ClickManager>();
-		_scoreManager = ManagerManager.GetManager<ScoreManager>();
+		_goldAndInventoryManager = ManagerManager.GetManager<GoldAndInventoryManager>();
 		_cardsManager = ManagerManager.GetManager<CardsManager>();
 	}
 
@@ -32,7 +32,7 @@ public partial class ButtonBridge : Button
 
 	private void RiseScoreByPower()
 	{
-		_scoreManager.RiseScoreByPower();
+		_goldAndInventoryManager.RiseScoreByPower();
 	}
 
 }

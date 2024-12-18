@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bmkfokuwnwp85" path="res://Sprites/T_OutlineSquare.png" id="2_gfy2p"]
 [ext_resource type="Script" path="res://Scripts/UI/DuckOnGame.cs" id="2_h3bl0"]
 
-[node name="Duck_Button" type="Button" node_paths=PackedStringArray("_loveBar")]
+[node name="Duck_Button" type="Button" node_paths=PackedStringArray("_buttonRef", "_loveBar")]
 offset_right = 200.0
 offset_bottom = 200.0
 icon = ExtResource("1_rflqg")
@@ -13,6 +13,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("2_h3bl0")
+_buttonRef = NodePath(".")
 _loveBar = NodePath("TextureProgressBar")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]

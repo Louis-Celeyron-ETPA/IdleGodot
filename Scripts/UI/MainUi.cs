@@ -4,27 +4,27 @@ using System;
 public partial class MainUi : Control
 {
     
-    [Export] private Label _scoreLabel;
+    [Export] private Label _goldLabel;
     [Export] private Label _gemLabel;
 
-    private ScoreManager _scoreManager;
+    private GoldAndInventoryManager _goldAndInventoryManager;
     private CardsManager _cardsManager;
     public override void _Ready()
     {
-        _scoreManager = ManagerManager.GetManager<ScoreManager>();
+        _goldAndInventoryManager = ManagerManager.GetManager<GoldAndInventoryManager>();
         _cardsManager = ManagerManager.GetManager<CardsManager>();
-        _scoreManager.OnScoreChange += UpdateScoreLabel;
+        _goldAndInventoryManager.OnGoldChange += UpdateGoldAndInventoryLabel;
         _cardsManager.OnGemChange += UpdateGemLabel;
     }
 
-    private void UpdateScoreLabel(int score)
+    private void UpdateGoldAndInventoryLabel(int gold)
     {
-        _scoreLabel.Text = "Score : " + score.ToString("00");
+        _goldLabel.Text = "Gold : " + gold.ToString("00");
     }
     
     
     private void UpdateGemLabel(int score)
     {
-        _scoreLabel.Text = "Gems : " + score.ToString("00");
+        _goldLabel.Text = "Gems : " + score.ToString("00");
     }
 }
