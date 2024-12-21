@@ -1,40 +1,49 @@
 using Godot;
 using System;
 
-public partial class DuckOnGame : Button
+public partial class DuckOnGame : StaticBody2D
 {
-    [Export]
-    private Duck _currentDuck;
-
+    
     [Export] private int _currentLove;
-    [Export] private Button _buttonRef;
     [Export] private TextureProgressBar _loveBar;
+    [Export] private Sprite2D _sprite;
 
     private ClickManager _clickManager;
     private GoldAndInventoryManager _goldAndInventoryManager;
     private DuckManager _duckManager;
+
+    public Duck CurrentDuck => _duckManager.CurrentDuck;
     public override void _Ready()
     {
         base._Ready();
         _clickManager = ManagerManager.GetManager<ClickManager>();
         _duckManager = ManagerManager.GetManager<DuckManager>();
         _goldAndInventoryManager = ManagerManager.GetManager<GoldAndInventoryManager>();
-        ButtonDown += RiseLove;
         
-        GenerateDuck();
+        _duckManager.OnDuckLoaded += InitializeDuck;
+        _duckManager.GenerateDuck();
     }
 
-    private void GenerateDuck()
+    private void OnInputEvent(Node viewport, InputEvent @event, long shapeidx)
     {
-        _currentDuck = _duckManager.GetDucks();
-        InitializeDuck();
+        if (@event is InputEventMouse inputEventMouse)
+        {
+            if (inputEventMouse.ButtonMask == MouseButtonMask.Left)
+            {
+                RiseLove();
+            }
+        }
+
+        if (@event is InputEventScreenTouch)
+        {
+            RiseLove();
+        }
     }
 
-    private void InitializeDuck()
+    private void InitializeDuck(Duck newDuck)
     {
         UpdateLove(0);
-        _buttonRef.SetButtonIcon( _currentDuck.Sprite);
-
+        _sprite.Texture = newDuck.Sprite;
     }
     
     private void RiseLove()
@@ -45,8 +54,8 @@ public partial class DuckOnGame : Button
     private void UpdateLove(int newAmount)
     {
         _currentLove = newAmount;
-        _loveBar.Value = ((double)_currentLove / (double)_currentDuck.BaseLove) * 100.0;
-        if (_currentLove >= _currentDuck.BaseLove)
+        _loveBar.Value = ((double)_currentLove / (double)CurrentDuck.BaseLove) * 100.0;
+        if (_currentLove >= CurrentDuck.BaseLove)
         {
             OnLoveMaxxed();
         }
@@ -54,7 +63,7 @@ public partial class DuckOnGame : Button
 
     private void OnLoveMaxxed()
     {
-        GenerateDuck();
-        _goldAndInventoryManager.RiseGold(_currentDuck.GoldAmount);
+        _goldAndInventoryManager.RiseGold(CurrentDuck.GoldAmount);
+        _duckManager.GenerateDuck();
     }
 }

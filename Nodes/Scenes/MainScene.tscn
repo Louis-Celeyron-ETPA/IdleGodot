@@ -1,15 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmlsvmo7eqrcm"]
+[gd_scene load_steps=4 format=3 uid="uid://dmlsvmo7eqrcm"]
 
 [ext_resource type="PackedScene" uid="uid://dx3fd256t0700" path="res://Nodes/UI/MainUI.tscn" id="1_r1grw"]
+[ext_resource type="Texture2D" uid="uid://bcohbfqpclokc" path="res://Sprites/Bg/BG_Forest.png" id="2_1b0ju"]
+[ext_resource type="PackedScene" uid="uid://4nrwx01qy5wp" path="res://Nodes/DuckInGame.tscn" id="2_1pg1q"]
 
 [node name="MainScene" type="Node2D"]
 
-[node name="Control" parent="." instance=ExtResource("1_r1grw")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Button" parent="Control" index="2"]
-offset_left = 551.0
-offset_top = 198.0
-offset_right = 751.0
-offset_bottom = 398.0
+[node name="BgForest" type="Sprite2D" parent="CanvasLayer"]
+scale = Vector2(1.12069, 1.12069)
+texture = ExtResource("2_1b0ju")
+centered = false
 
-[editable path="Control"]
+[node name="DuckInGame" parent="CanvasLayer" instance=ExtResource("2_1pg1q")]
+position = Vector2(606, 338)
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("1_r1grw")]
+visible = false
+
+[editable path="CanvasLayer/Control"]

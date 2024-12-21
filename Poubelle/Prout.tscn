@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ubfacwohm8pu"]
+
+[ext_resource type="PackedScene" uid="uid://4nrwx01qy5wp" path="res://Nodes/DuckInGame.tscn" id="1_qqem6"]
+
+[node name="Prout" type="Node2D"]
+
+[node name="DuckInGame" parent="." instance=ExtResource("1_qqem6")]
+position = Vector2(432, 280)

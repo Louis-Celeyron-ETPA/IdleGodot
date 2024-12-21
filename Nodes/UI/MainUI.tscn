@@ -1,9 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dx3fd256t0700"]
+[gd_scene load_steps=5 format=3 uid="uid://dx3fd256t0700"]
 
 [ext_resource type="Script" path="res://Scripts/UI/MainUi.cs" id="1_h42yt"]
 [ext_resource type="Script" path="res://Scripts/UI/ButtonBridge.cs" id="2_qiuml"]
-[ext_resource type="PackedScene" uid="uid://5obhy2waqwgn" path="res://Nodes/UI/Duck_Button.tscn" id="3_rtlpd"]
-[ext_resource type="Resource" uid="uid://c5ifhj8kcw0vw" path="res://Poubelle/EnemyTest.tres" id="4_6bk23"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6mogv"]
 font_size = 44
@@ -51,21 +49,5 @@ label_settings = SubResource("LabelSettings_6mogv")
 layout_mode = 2
 text = "Gems : 00"
 label_settings = SubResource("LabelSettings_tj433")
-
-[node name="Button" parent="." instance=ExtResource("3_rtlpd")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -100.0
-offset_right = 100.0
-offset_bottom = 100.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(100, 100)
-_currentDuck = ExtResource("4_6bk23")
 
 [connection signal="button_down" from="RisePowerButton" to="RisePowerButton" method="Temp_Draw"]

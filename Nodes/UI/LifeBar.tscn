@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://bypt4ao1ekg0h"]
+
+[ext_resource type="Texture2D" uid="uid://bmkfokuwnwp85" path="res://Sprites/T_OutlineSquare.png" id="1_h54py"]
+[ext_resource type="Texture2D" uid="uid://ht17jspivebp" path="res://Sprites/T_Heart.png" id="2_24d36"]
+
+[node name="TextureProgressBar" type="TextureProgressBar"]
+anchors_preset = -1
+anchor_left = 0.162
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 11.04
+offset_bottom = 27.285
+grow_horizontal = 2
+grow_vertical = 2
+value = 67.0
+nine_patch_stretch = true
+stretch_margin_left = 10
+stretch_margin_top = 1
+stretch_margin_right = 10
+stretch_margin_bottom = 1
+texture_under = ExtResource("1_h54py")
+texture_progress = ExtResource("1_h54py")
+tint_under = Color(0.217331, 0.0019547, 0.0422491, 1)
+tint_over = Color(1, 0, 1, 1)
+tint_progress = Color(0.709804, 0.317647, 0.411765, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.711507, 0.318841, 0.411267, 1)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -32.4
+offset_top = -27.285
+offset_right = 12.6
+offset_bottom = 12.715
+grow_vertical = 0
+texture = ExtResource("2_24d36")
+expand_mode = 3
