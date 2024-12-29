@@ -1,10 +1,17 @@
-[gd_resource type="Resource" script_class="Duck" load_steps=3 format=3 uid="uid://ckju26rqmy5c3"]
+[gd_resource type="Resource" script_class="Duck" load_steps=5 format=3 uid="uid://ckju26rqmy5c3"]
 
 [ext_resource type="Texture2D" uid="uid://c3uc5w3ixgwa4" path="res://Sprites/Ducks/T_D_Goldeneye.png" id="1_figew"]
+[ext_resource type="Script" path="res://Scripts/Ressources/Events/CE_AddPower.cs" id="2_47pjf"]
 [ext_resource type="Script" path="res://Scripts/Ressources/Duck.cs" id="2_dlgum"]
 
+[sub_resource type="Resource" id="Resource_ccbag"]
+script = ExtResource("2_47pjf")
+_amount = 1
+
 [resource]
+resource_name = "Goldeneye"
 script = ExtResource("2_dlgum")
 BaseLove = 15
 Sprite = ExtResource("1_figew")
 GoldAmount = 10
+_events = Array[Object]([SubResource("Resource_ccbag")])

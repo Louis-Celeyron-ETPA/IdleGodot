@@ -4,7 +4,9 @@
 [ext_resource type="Script" path="res://Scripts/Ressources/Duck.cs" id="2_l1ww2"]
 
 [resource]
+resource_name = "Regular Duck"
 script = ExtResource("2_l1ww2")
 BaseLove = 60
 Sprite = ExtResource("1_qp65x")
 GoldAmount = 5
+_events = Array[Object]([])

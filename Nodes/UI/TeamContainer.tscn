@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://cshpjhg4ency8"]
+
+[ext_resource type="PackedScene" uid="uid://blo3hayvplffe" path="res://Nodes/UI/CardInUIZoomedOut.tscn" id="1_6c3dj"]
+[ext_resource type="Texture2D" uid="uid://v5pdahduyehj" path="res://Sprites/WhiteSquare.png" id="1_cjcdw"]
+
+[node name="Team Container" type="Control"]
+layout_mode = 3
+anchor_top = 0.568
+anchor_bottom = 0.568
+offset_left = 8.0
+offset_top = -184.064
+offset_right = 216.0
+offset_bottom = 199.936
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.509804, 0.509804, 0.509804, 0.603922)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_cjcdw")
+expand_mode = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -184.0
+offset_right = 90.0
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CardZoomedIn" parent="GridContainer" instance=ExtResource("1_6c3dj")]
+layout_mode = 2
+
+[node name="CardZoomedIn2" parent="GridContainer" instance=ExtResource("1_6c3dj")]
+layout_mode = 2
+
+[node name="CardZoomedIn3" parent="GridContainer" instance=ExtResource("1_6c3dj")]
+layout_mode = 2
+
+[editable path="GridContainer/CardZoomedIn"]
+[editable path="GridContainer/CardZoomedIn2"]
+[editable path="GridContainer/CardZoomedIn3"]

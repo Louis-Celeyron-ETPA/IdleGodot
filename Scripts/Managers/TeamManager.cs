@@ -3,10 +3,10 @@ using System;
 using Godot.Collections;
 
 [GlobalClass]
-public partial class CardsManager : Manager
+public partial class TeamManager : Manager
 {
     [Export]
-    private Array<Card> _cards;
+    private Array<Duck> _team;
 
     private int _currentGem, _maxGem;
     private ClickManager _clickManagerRef;
@@ -20,9 +20,15 @@ public partial class CardsManager : Manager
         _clickManagerRef = ManagerManager.GetManager<ClickManager>();
     }
 
-    public void Draw()
+    public void StartOfBattle()
     {
-        _cards[0].Draw(this);
+        if (_team.Count > 0)
+        {
+            foreach (var teammate in _team)
+            {
+                teammate.RunEventOnStart(this);
+            }
+        }
     }
 
     public void ChangeGem(int newAmount)

@@ -6,13 +6,18 @@ public partial class CE_AddPower : CardEvent
 {
     [Export]
     private int _amount;
-    public override void OnSubscribe(CardsManager cardsManager)
+    public override void OnSubscribe(TeamManager teamManager)
     {
-        cardsManager.ClickManagerRef.RiseTempPower(_amount);
+        teamManager.ClickManagerRef.RiseTempPower(_amount);
     }
 
-    public override void OnUnsubscribe(CardsManager cardsManager)
+    public override void OnUnsubscribe(TeamManager teamManager)
     {
-        cardsManager.ClickManagerRef.RiseTempPower(-_amount);
+        teamManager.ClickManagerRef.RiseTempPower(-_amount);
+    }
+
+    public override string GetDescription()
+    {
+        return $"+ {_amount} pet power";
     }
 }

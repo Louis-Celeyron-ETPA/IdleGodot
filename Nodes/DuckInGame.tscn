@@ -21,6 +21,7 @@ shape = SubResource("RectangleShape2D_lbmbo")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
+anchors_preset = 0
 offset_left = -175.0
 offset_top = 146.725
 offset_right = 175.0

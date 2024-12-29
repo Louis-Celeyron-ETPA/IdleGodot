@@ -8,13 +8,13 @@ public partial class MainUi : Control
     [Export] private Label _gemLabel;
 
     private GoldAndInventoryManager _goldAndInventoryManager;
-    private CardsManager _cardsManager;
+    private TeamManager _teamManager;
     public override void _Ready()
     {
         _goldAndInventoryManager = ManagerManager.GetManager<GoldAndInventoryManager>();
-        _cardsManager = ManagerManager.GetManager<CardsManager>();
+        _teamManager = ManagerManager.GetManager<TeamManager>();
         _goldAndInventoryManager.OnGoldChange += UpdateGoldAndInventoryLabel;
-        _cardsManager.OnGemChange += UpdateGemLabel;
+        _teamManager.OnGemChange += UpdateGemLabel;
     }
 
     private void UpdateGoldAndInventoryLabel(int gold)

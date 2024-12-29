@@ -5,14 +5,14 @@ public partial class ButtonBridge : Button
 {
 
 	private GoldAndInventoryManager _goldAndInventoryManager;
-	private CardsManager _cardsManager;
+	private TeamManager _teamManager;
 	private ClickManager _clickManager;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		_clickManager = ManagerManager.GetManager<ClickManager>();
 		_goldAndInventoryManager = ManagerManager.GetManager<GoldAndInventoryManager>();
-		_cardsManager = ManagerManager.GetManager<CardsManager>();
+		_teamManager = ManagerManager.GetManager<TeamManager>();
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,10 +20,6 @@ public partial class ButtonBridge : Button
 	{
 	}
 
-	public void Temp_Draw()
-	{
-		_cardsManager.Draw();
-	}
 	
 	private void RisePower()
 	{
