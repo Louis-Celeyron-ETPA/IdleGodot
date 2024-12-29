@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Duck" load_steps=3 format=3 uid="uid://e27kd1sad2dw"]
 
-[ext_resource type="Texture2D" uid="uid://dcyo7y5r2jj0" path="res://Sprites/Ducks/T_D_DevilDuck.png" id="1_7qe5l"]
+[ext_resource type="Texture2D" path="res://Sprites/Ducks/T_D_DevilDuck.png" id="1_7qe5l"]
 [ext_resource type="Script" path="res://Scripts/Ressources/Duck.cs" id="2_tovsn"]
 
 [resource]

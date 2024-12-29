@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6cp6yuuly7ga"
-path="res://.godot/imported/T_D_FairyDuck.png-45e63f545dfd5f0890871492889d0976.ctex"
+uid="uid://boe4038ekmhud"
+path="res://.godot/imported/T_D_Cook.png-0922f5ab71ccdbce30e8adc98fe0cb03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ducks/T_D_FairyDuck.png"
-dest_files=["res://.godot/imported/T_D_FairyDuck.png-45e63f545dfd5f0890871492889d0976.ctex"]
+source_file="res://Sprites/Ducks/T_D_Cook.png"
+dest_files=["res://.godot/imported/T_D_Cook.png-0922f5ab71ccdbce30e8adc98fe0cb03.ctex"]
 
 [params]
 

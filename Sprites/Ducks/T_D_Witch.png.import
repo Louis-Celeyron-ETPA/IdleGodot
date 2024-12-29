@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccrdhk5xf67q7"
-path="res://.godot/imported/T_D_Mallard.png-265251265938b2a553cad60ad1dda8a6.ctex"
+uid="uid://crgywmtq60aau"
+path="res://.godot/imported/T_D_Witch.png-4f86cb13e36e69ad4ee7f1007beaec65.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ducks/T_D_Mallard.png"
-dest_files=["res://.godot/imported/T_D_Mallard.png-265251265938b2a553cad60ad1dda8a6.ctex"]
+source_file="res://Sprites/Ducks/T_D_Witch.png"
+dest_files=["res://.godot/imported/T_D_Witch.png-4f86cb13e36e69ad4ee7f1007beaec65.ctex"]
 
 [params]
 

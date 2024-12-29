@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://du5m8hyxtpn1i"
-path="res://.godot/imported/T_D_DefinitlyNotADuck.png-bd7b42e53aeb5ae3907032af45c6db08.ctex"
+uid="uid://dh52wvjmbng4m"
+path="res://.godot/imported/T_D_Noir.png-21be4050ba6a2ae6c001ba348f71db09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ducks/T_D_DefinitlyNotADuck.png"
-dest_files=["res://.godot/imported/T_D_DefinitlyNotADuck.png-bd7b42e53aeb5ae3907032af45c6db08.ctex"]
+source_file="res://Sprites/Ducks/T_D_Noir.png"
+dest_files=["res://.godot/imported/T_D_Noir.png-21be4050ba6a2ae6c001ba348f71db09.ctex"]
 
 [params]
 

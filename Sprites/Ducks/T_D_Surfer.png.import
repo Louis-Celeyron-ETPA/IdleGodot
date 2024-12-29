@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckay56kwicuym"
-path="res://.godot/imported/T_D_OfficeDuck.png-04eb9f1f2f995727972e355d394945a6.ctex"
+uid="uid://be4mnm5vde8b5"
+path="res://.godot/imported/T_D_Surfer.png-2c2cc64796dade9081b78d2d63e05117.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ducks/T_D_OfficeDuck.png"
-dest_files=["res://.godot/imported/T_D_OfficeDuck.png-04eb9f1f2f995727972e355d394945a6.ctex"]
+source_file="res://Sprites/Ducks/T_D_Surfer.png"
+dest_files=["res://.godot/imported/T_D_Surfer.png-2c2cc64796dade9081b78d2d63e05117.ctex"]
 
 [params]
 

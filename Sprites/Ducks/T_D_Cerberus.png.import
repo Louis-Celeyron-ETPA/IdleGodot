@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cln5r51n4v1jt"
-path="res://.godot/imported/T_D_SpiritDuck.png-76aa7d3c61b67c4f8acced9adb1f92ad.ctex"
+uid="uid://bdvny20yjn5b8"
+path="res://.godot/imported/T_D_Cerberus.png-c09e54398ae738ff19858538f6fb9efa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ducks/T_D_SpiritDuck.png"
-dest_files=["res://.godot/imported/T_D_SpiritDuck.png-76aa7d3c61b67c4f8acced9adb1f92ad.ctex"]
+source_file="res://Sprites/Ducks/T_D_Cerberus.png"
+dest_files=["res://.godot/imported/T_D_Cerberus.png-c09e54398ae738ff19858538f6fb9efa.ctex"]
 
 [params]
 

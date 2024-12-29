@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/UI/CardInUiZoomedOut.cs" id="1_67res"]
 [ext_resource type="Texture2D" uid="uid://v5pdahduyehj" path="res://Sprites/WhiteSquare.png" id="1_buajn"]
-[ext_resource type="Texture2D" uid="uid://c0np53ty2ds6u" path="res://Sprites/Ducks/T_D_WitchDuck.png" id="2_4cp1t"]
 [ext_resource type="Resource" uid="uid://ckju26rqmy5c3" path="res://Resources/Ducks/Goldeneye.tres" id="2_jy5b2"]
+[ext_resource type="Texture2D" uid="uid://crjormcfaftvi" path="res://T_D_Cerberus.png" id="4_j8s2s"]
 [ext_resource type="PackedScene" uid="uid://b5ksqbhlm7gcc" path="res://Nodes/UI/CardInUIZoomed.tscn" id="4_pjrs8"]
 
 [node name="CardZoomedIn" type="Control" node_paths=PackedStringArray("_zoomedInCard")]
@@ -25,7 +25,7 @@ _currentDuck = ExtResource("2_jy5b2")
 _zoomedInCard = NodePath("CardZoomedIn")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-modulate = Color(0.0742121, 0.0809951, 0.0954933, 1)
+modulate = Color(0.511292, 0.645429, 0.780306, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -47,7 +47,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("2_4cp1t")
+texture = ExtResource("4_j8s2s")
 expand_mode = 5
 stretch_mode = 4
 

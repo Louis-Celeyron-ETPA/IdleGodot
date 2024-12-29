@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2g8jqn4w0gih"
-path="res://.godot/imported/T_D_DuckNoir.png-e9a0aed08d5396087c2cf2954bcaac4d.ctex"
+uid="uid://d1mhyqygmocpc"
+path="res://.godot/imported/T_D_Office.png-2deb77363d21f798f9d7a75e2f13642f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ducks/T_D_DuckNoir.png"
-dest_files=["res://.godot/imported/T_D_DuckNoir.png-e9a0aed08d5396087c2cf2954bcaac4d.ctex"]
+source_file="res://Sprites/Ducks/T_D_Office.png"
+dest_files=["res://.godot/imported/T_D_Office.png-2deb77363d21f798f9d7a75e2f13642f.ctex"]
 
 [params]
 

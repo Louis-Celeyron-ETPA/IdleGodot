@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://4nrwx01qy5wp"]
 
-[ext_resource type="Texture2D" uid="uid://cccxnvm45ei6e" path="res://Sprites/Ducks/T_D_Regular.png" id="1_i8khj"]
 [ext_resource type="Script" path="res://Scripts/UI/DuckOnGame.cs" id="1_j2gnu"]
+[ext_resource type="Texture2D" uid="uid://crjormcfaftvi" path="res://T_D_Cerberus.png" id="2_0rhvq"]
 [ext_resource type="PackedScene" uid="uid://bypt4ao1ekg0h" path="res://Nodes/UI/LifeBar.tscn" id="2_ios8e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbmbo"]
-size = Vector2(272.53, 285.36)
+size = Vector2(400, 400)
 
 [node name="DuckInGame" type="StaticBody2D" node_paths=PackedStringArray("_loveBar", "_sprite")]
 input_pickable = true
@@ -14,18 +14,19 @@ _loveBar = NodePath("Control/TextureProgressBar")
 _sprite = NodePath("Sprite")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_i8khj")
+texture = ExtResource("2_0rhvq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.00001, 0)
 shape = SubResource("RectangleShape2D_lbmbo")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -175.0
-offset_top = 146.725
+offset_top = 200.0
 offset_right = 175.0
-offset_bottom = 191.725
+offset_bottom = 245.0
 pivot_offset = Vector2(175, 0)
 
 [node name="TextureProgressBar" parent="Control" instance=ExtResource("2_ios8e")]

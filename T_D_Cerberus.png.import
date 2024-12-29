@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6k880n6aeaar"
-path="res://.godot/imported/T_D_SurferDuck.png-a2b97eaa3774c41152fd0f4dfcbf5429.ctex"
+uid="uid://crjormcfaftvi"
+path="res://.godot/imported/T_D_Cerberus.png-3dbaefcce1e850099e79a86a74e63727.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ducks/T_D_SurferDuck.png"
-dest_files=["res://.godot/imported/T_D_SurferDuck.png-a2b97eaa3774c41152fd0f4dfcbf5429.ctex"]
+source_file="res://T_D_Cerberus.png"
+dest_files=["res://.godot/imported/T_D_Cerberus.png-3dbaefcce1e850099e79a86a74e63727.ctex"]
 
 [params]
 
