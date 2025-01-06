@@ -1,17 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://4nrwx01qy5wp"]
+[gd_scene load_steps=6 format=3 uid="uid://4nrwx01qy5wp"]
 
 [ext_resource type="Script" path="res://Scripts/UI/DuckOnGame.cs" id="1_j2gnu"]
 [ext_resource type="Texture2D" uid="uid://crjormcfaftvi" path="res://T_D_Cerberus.png" id="2_0rhvq"]
-[ext_resource type="PackedScene" uid="uid://bypt4ao1ekg0h" path="res://Nodes/UI/LifeBar.tscn" id="2_ios8e"]
+[ext_resource type="PackedScene" uid="uid://bypt4ao1ekg0h" path="res://Nodes/UI/ProgressBAr.tscn" id="2_ios8e"]
+[ext_resource type="Texture2D" uid="uid://caw38tui72eml" path="res://Sprites/RUN.png" id="4_i3upl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbmbo"]
 size = Vector2(400, 400)
 
-[node name="DuckInGame" type="StaticBody2D" node_paths=PackedStringArray("_loveBar", "_sprite")]
+[node name="DuckInGame" type="StaticBody2D" node_paths=PackedStringArray("_loveBar", "_runBar", "_sprite", "_runTimer")]
 input_pickable = true
 script = ExtResource("1_j2gnu")
-_loveBar = NodePath("Control/TextureProgressBar")
+_loveBar = NodePath("Control/LifeProgressBar")
+_runBar = NodePath("Control/RunProgressBar")
 _sprite = NodePath("Sprite")
+_runTimer = NodePath("Timer")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_0rhvq")
@@ -29,13 +32,34 @@ offset_right = 175.0
 offset_bottom = 245.0
 pivot_offset = Vector2(175, 0)
 
-[node name="TextureProgressBar" parent="Control" instance=ExtResource("2_ios8e")]
+[node name="LifeProgressBar" parent="Control" instance=ExtResource("2_ios8e")]
 layout_mode = 1
 anchors_preset = 15
 anchor_left = 0.0
 anchor_top = 0.0
 offset_left = 25.0
-offset_top = 15.0
-offset_bottom = -15.0
+offset_top = 16.0
+offset_bottom = -14.0
+
+[node name="RunProgressBar" parent="Control" instance=ExtResource("2_ios8e")]
+layout_mode = 1
+anchor_left = 0.0
+anchor_top = 0.0
+offset_left = 25.0
+offset_top = 55.88
+offset_bottom = 25.88
+tint_under = Color(0, 0.080456, 0.251044, 1)
+tint_over = Color(0.156863, 0, 1, 1)
+tint_progress = Color(0.486275, 0.647059, 0.917647, 1)
+
+[node name="TextureRect" parent="Control/RunProgressBar" index="0"]
+modulate = Color(0.488112, 0.648816, 0.917008, 1)
+texture = ExtResource("4_i3upl")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
 
 [connection signal="input_event" from="." to="." method="OnInputEvent"]
+[connection signal="timeout" from="Timer" to="." method="RiseRun"]
+
+[editable path="Control/RunProgressBar"]

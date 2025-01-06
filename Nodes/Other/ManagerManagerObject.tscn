@@ -13,8 +13,11 @@
 [node name="ManagerManagerObject" type="Node"]
 script = ExtResource("1_2kg6h")
 
-[node name="ClickManager" type="Node" parent="."]
+[node name="ClickManager" type="Node" parent="." node_paths=PackedStringArray("_autoTimer")]
 script = ExtResource("3_6u888")
+_autoTimer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="ClickManager"]
 
 [node name="DuckManager" type="Node" parent="."]
 script = ExtResource("5_o0d17")
@@ -25,4 +28,6 @@ script = ExtResource("7_4mn8l")
 
 [node name="TeamManager" type="Node" parent="."]
 script = ExtResource("9_286i0")
-_team = Array[Object]([])
+_team = Array[Object]([ExtResource("8_8tbpv"), ExtResource("7_cuptk"), ExtResource("6_6sgxk"), ExtResource("9_8fu6q")])
+
+[connection signal="timeout" from="ClickManager/Timer" to="ClickManager" method="GenericAutoLove"]

@@ -15,9 +15,24 @@ public partial class TeamManager : Manager
     
     [Signal]
     public delegate void OnGemChangeEventHandler(int score);
+
+    [Signal]
+    public delegate void OnTeamUpdatedEventHandler(Array<Duck> team);
     public override void ManagerInit()
     {
         _clickManagerRef = ManagerManager.GetManager<ClickManager>();
+        StartOfBattle();
+    }
+    
+    public void AddActionToTeamUpdate(OnTeamUpdatedEventHandler @event)
+    {
+        OnTeamUpdated += @event;
+        UpdateTeam();
+    }
+
+    public void UpdateTeam()
+    {
+        EmitSignal(SignalName.OnTeamUpdated, _team);
     }
 
     public void StartOfBattle()

@@ -5,8 +5,9 @@ using System;
 [GlobalClass]
 public partial class Duck : Resource
 {
-    [Export] public int BaseLove;
+    [Export] public int BaseLove, BaseRun = 50;
     [Export] public Texture2D Sprite;
+    [Export] public float RunRate = .2f;
     [Export] public int GoldAmount;
     [Export] private Array<CardEvent> _events;
 

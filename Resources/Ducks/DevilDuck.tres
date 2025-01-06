@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Duck" load_steps=3 format=3 uid="uid://e27kd1sad2dw"]
 
-[ext_resource type="Texture2D" path="res://Sprites/Ducks/T_D_DevilDuck.png" id="1_7qe5l"]
+[ext_resource type="Texture2D" uid="uid://c1sq81u4t6gft" path="res://Sprites/Ducks/T_D_Devil.png" id="1_xyhh5"]
 [ext_resource type="Script" path="res://Scripts/Ressources/Duck.cs" id="2_tovsn"]
 
 [resource]
 resource_name = "Devil Duck"
 script = ExtResource("2_tovsn")
 BaseLove = 15
-Sprite = ExtResource("1_7qe5l")
+Sprite = ExtResource("1_xyhh5")
 GoldAmount = 20
 _events = Array[Object]([])

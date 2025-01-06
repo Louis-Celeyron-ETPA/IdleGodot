@@ -1,0 +1,97 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfjydclnjqh47"]
+
+[ext_resource type="PackedScene" uid="uid://cshpjhg4ency8" path="res://Nodes/UI/TeamContainer.tscn" id="1_0lknl"]
+[ext_resource type="Script" path="res://Scripts/UI/TeamGlobalContainer.cs" id="1_34c0r"]
+
+[node name="TeamGlobalContainer" type="Control" node_paths=PackedStringArray("_teamCards")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_34c0r")
+_teamCards = [NodePath("Team Container/GridContainer/CardZoomedIn"), NodePath("Team Container/GridContainer/CardZoomedIn2"), NodePath("Team Container/GridContainer/CardZoomedIn3"), NodePath("Team Container2/GridContainer/CardZoomedIn"), NodePath("Team Container2/GridContainer/CardZoomedIn2"), NodePath("Team Container2/GridContainer/CardZoomedIn3")]
+
+[node name="Team Container" parent="." instance=ExtResource("1_0lknl")]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 0.0
+offset_top = -192.0
+offset_right = 208.0
+offset_bottom = 192.0
+grow_vertical = 2
+
+[node name="CardZoomedIn" parent="Team Container/GridContainer/CardZoomedIn" index="2"]
+offset_left = 14.0
+offset_top = -238.56
+offset_right = 264.0
+offset_bottom = 141.44
+
+[node name="CardZoomedIn" parent="Team Container/GridContainer/CardZoomedIn2" index="2"]
+offset_left = 22.0
+offset_top = -314.56
+offset_right = 272.0
+offset_bottom = 65.44
+
+[node name="CardZoomedIn" parent="Team Container/GridContainer/CardZoomedIn3" index="2"]
+offset_left = 14.0
+offset_top = -318.56
+offset_right = 264.0
+offset_bottom = 61.44
+
+[node name="Team Container2" parent="." instance=ExtResource("1_0lknl")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -208.0
+offset_top = -192.0
+offset_right = 0.0
+offset_bottom = 192.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="CardZoomedIn" parent="Team Container2/GridContainer/CardZoomedIn" index="2"]
+anchor_left = 0.011
+anchor_top = 0.667
+anchor_right = 0.011
+anchor_bottom = 0.667
+offset_left = -255.98
+offset_top = -256.04
+offset_right = -5.98
+offset_bottom = 123.96
+
+[node name="CardZoomedIn" parent="Team Container2/GridContainer/CardZoomedIn2" index="2"]
+anchor_left = -0.033
+anchor_top = 0.567
+anchor_right = -0.033
+anchor_bottom = 0.567
+offset_left = -256.06
+offset_top = -312.04
+offset_right = -6.06
+offset_bottom = 67.96
+
+[node name="CardZoomedIn" parent="Team Container2/GridContainer/CardZoomedIn3" index="2"]
+anchor_left = 0.011
+anchor_top = 0.5
+anchor_right = 0.011
+anchor_bottom = 0.5
+offset_left = -255.98
+offset_top = -316.0
+offset_right = -5.98
+offset_bottom = 64.0
+
+[editable path="Team Container"]
+[editable path="Team Container/GridContainer/CardZoomedIn"]
+[editable path="Team Container/GridContainer/CardZoomedIn2"]
+[editable path="Team Container/GridContainer/CardZoomedIn3"]
+[editable path="Team Container2"]
+[editable path="Team Container2/GridContainer/CardZoomedIn"]
+[editable path="Team Container2/GridContainer/CardZoomedIn2"]
+[editable path="Team Container2/GridContainer/CardZoomedIn3"]

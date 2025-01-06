@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bypt4ao1ekg0h"]
 
-[ext_resource type="Texture2D" uid="uid://bmkfokuwnwp85" path="res://Sprites/T_OutlineSquare.png" id="1_h54py"]
-[ext_resource type="Texture2D" uid="uid://ht17jspivebp" path="res://Sprites/T_Heart.png" id="2_24d36"]
+[ext_resource type="Texture2D" uid="uid://bmkfokuwnwp85" path="res://Sprites/T_OutlineSquare.png" id="1_0s7ii"]
+[ext_resource type="Texture2D" uid="uid://ht17jspivebp" path="res://Sprites/T_Heart.png" id="2_qlrip"]
 
 [node name="TextureProgressBar" type="TextureProgressBar"]
 anchors_preset = -1
@@ -19,8 +19,8 @@ stretch_margin_left = 10
 stretch_margin_top = 1
 stretch_margin_right = 10
 stretch_margin_bottom = 1
-texture_under = ExtResource("1_h54py")
-texture_progress = ExtResource("1_h54py")
+texture_under = ExtResource("1_0s7ii")
+texture_progress = ExtResource("1_0s7ii")
 tint_under = Color(0.217331, 0.0019547, 0.0422491, 1)
 tint_over = Color(1, 0, 1, 1)
 tint_progress = Color(0.709804, 0.317647, 0.411765, 1)
@@ -36,5 +36,5 @@ offset_top = -27.285
 offset_right = 12.6
 offset_bottom = 12.715
 grow_vertical = 0
-texture = ExtResource("2_24d36")
+texture = ExtResource("2_qlrip")
 expand_mode = 3

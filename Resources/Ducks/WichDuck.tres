@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Duck" load_steps=3 format=3 uid="uid://bbqi2vvmlor6c"]
 
-[ext_resource type="Texture2D" uid="uid://crgywmtq60aau" path="res://Sprites/Ducks/T_D_Witch.png" id="1_7nfto"]
+[ext_resource type="Texture2D" uid="uid://crgywmtq60aau" path="res://Sprites/Ducks/T_D_Witch.png" id="1_ls63y"]
 [ext_resource type="Script" path="res://Scripts/Ressources/Duck.cs" id="2_t6l5d"]
 
 [resource]
 resource_name = "Witch Duck"
 script = ExtResource("2_t6l5d")
 BaseLove = 12
-Sprite = ExtResource("1_7nfto")
+Sprite = ExtResource("1_ls63y")
 GoldAmount = 63
 _events = Array[Object]([])

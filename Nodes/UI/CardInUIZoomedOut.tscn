@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://crjormcfaftvi" path="res://T_D_Cerberus.png" id="4_j8s2s"]
 [ext_resource type="PackedScene" uid="uid://b5ksqbhlm7gcc" path="res://Nodes/UI/CardInUIZoomed.tscn" id="4_pjrs8"]
 
-[node name="CardZoomedIn" type="Control" node_paths=PackedStringArray("_zoomedInCard")]
+[node name="CardZoomedOut" type="Control" node_paths=PackedStringArray("_zoomedInCard", "_texRec", "_bgTexRec")]
 custom_minimum_size = Vector2(180, 120)
 layout_mode = 3
 anchors_preset = 8
@@ -23,6 +23,8 @@ grow_vertical = 2
 script = ExtResource("1_67res")
 _currentDuck = ExtResource("2_jy5b2")
 _zoomedInCard = NodePath("CardZoomedIn")
+_texRec = NodePath("CardImage")
+_bgTexRec = NodePath("TextureRect")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0.511292, 0.645429, 0.780306, 1)
