@@ -33,21 +33,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_h42yt")
-_grapeLabel = NodePath("Control/HBoxContainer/GrapeContainer/GrapeLabel")
-_peasLabel = NodePath("Control/HBoxContainer/PeasContainer/PeasLabel")
-_cornLabel = NodePath("Control/HBoxContainer/CornContainer/CornLabel")
+_grapeLabel = NodePath("Numbers/HBoxContainer/GrapeContainer/GrapeLabel")
+_peasLabel = NodePath("Numbers/HBoxContainer/PeasContainer/PeasLabel")
+_cornLabel = NodePath("Numbers/HBoxContainer/CornContainer/CornLabel")
 
 [node name="TeamGlobalContainer" parent="." instance=ExtResource("2_susmh")]
 layout_mode = 1
 
-[node name="Control" type="Control" parent="."]
+[node name="Numbers" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 63.985
 grow_horizontal = 2
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="TextureRect" type="TextureRect" parent="Numbers"]
 modulate = Color(0.364706, 0.364706, 0.364706, 0.815686)
 layout_mode = 1
 anchors_preset = 15
@@ -57,7 +57,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_8741h")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Numbers"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -67,44 +67,69 @@ grow_vertical = 2
 theme_override_constants/separation = 145
 alignment = 1
 
-[node name="CornContainer" type="HBoxContainer" parent="Control/HBoxContainer"]
+[node name="CornContainer" type="HBoxContainer" parent="Numbers/HBoxContainer"]
 layout_mode = 2
 
-[node name="CornTex" type="TextureRect" parent="Control/HBoxContainer/CornContainer"]
+[node name="CornTex" type="TextureRect" parent="Numbers/HBoxContainer/CornContainer"]
 layout_mode = 2
 texture = ExtResource("4_brhfp")
 expand_mode = 2
 stretch_mode = 4
 
-[node name="CornLabel" type="Label" parent="Control/HBoxContainer/CornContainer"]
+[node name="CornLabel" type="Label" parent="Numbers/HBoxContainer/CornContainer"]
 layout_mode = 2
 text = "0000"
 label_settings = SubResource("LabelSettings_6mogv")
 
-[node name="GrapeContainer" type="HBoxContainer" parent="Control/HBoxContainer"]
+[node name="GrapeContainer" type="HBoxContainer" parent="Numbers/HBoxContainer"]
 layout_mode = 2
 
-[node name="GrapeTex" type="TextureRect" parent="Control/HBoxContainer/GrapeContainer"]
+[node name="GrapeTex" type="TextureRect" parent="Numbers/HBoxContainer/GrapeContainer"]
 layout_mode = 2
 texture = ExtResource("5_85qby")
 expand_mode = 2
 stretch_mode = 4
 
-[node name="GrapeLabel" type="Label" parent="Control/HBoxContainer/GrapeContainer"]
+[node name="GrapeLabel" type="Label" parent="Numbers/HBoxContainer/GrapeContainer"]
 layout_mode = 2
 text = "0000"
 label_settings = SubResource("LabelSettings_tj433")
 
-[node name="PeasContainer" type="HBoxContainer" parent="Control/HBoxContainer"]
+[node name="PeasContainer" type="HBoxContainer" parent="Numbers/HBoxContainer"]
 layout_mode = 2
 
-[node name="PeasTex" type="TextureRect" parent="Control/HBoxContainer/PeasContainer"]
+[node name="PeasTex" type="TextureRect" parent="Numbers/HBoxContainer/PeasContainer"]
 layout_mode = 2
 texture = ExtResource("6_f4k3j")
 expand_mode = 2
 stretch_mode = 4
 
-[node name="PeasLabel" type="Label" parent="Control/HBoxContainer/PeasContainer"]
+[node name="PeasLabel" type="Label" parent="Numbers/HBoxContainer/PeasContainer"]
 layout_mode = 2
 text = "0000"
 label_settings = SubResource("LabelSettings_ja0gb")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -190.0
+offset_top = -109.0
+offset_right = -17.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Shop"
+horizontal_alignment = 1
+vertical_alignment = 1

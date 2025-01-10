@@ -18,3 +18,4 @@ position = Vector2(606, 289.32)
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource("1_r1grw")]
 mouse_filter = 1
+metadata/_edit_use_anchors_ = true
