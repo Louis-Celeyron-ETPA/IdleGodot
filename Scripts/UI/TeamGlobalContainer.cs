@@ -10,7 +10,7 @@ public partial class TeamGlobalContainer : Control
     public override void _Ready()
     {
         _teamManager = ManagerManager.GetManager<TeamManager>();
-        _teamManager.AddActionToTeamUpdate( UpdateTeam);
+        _teamManager.AddActionToTeamUpdate(UpdateTeam);
     }
 
     public void UpdateTeam(Array<Duck> team)

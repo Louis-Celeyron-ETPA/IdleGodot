@@ -4,8 +4,9 @@ using System;
 public partial class MainUi : Control
 {
     
-    [Export] private Label _goldLabel;
-    [Export] private Label _gemLabel;
+    [Export] private Label _grapeLabel;
+    [Export] private Label _peasLabel;
+    [Export] private Label _cornLabel;
 
     private GoldAndInventoryManager _goldAndInventoryManager;
     private TeamManager _teamManager;
@@ -13,18 +14,18 @@ public partial class MainUi : Control
     {
         _goldAndInventoryManager = ManagerManager.GetManager<GoldAndInventoryManager>();
         _teamManager = ManagerManager.GetManager<TeamManager>();
-        _goldAndInventoryManager.OnGoldChange += UpdateGoldAndInventoryLabel;
-        _teamManager.OnGemChange += UpdateGemLabel;
+        _goldAndInventoryManager.OnGoldChange += UpdateCornLabel;
+        _teamManager.OnGemChange += UpdateGrapeLabel;
     }
 
-    private void UpdateGoldAndInventoryLabel(int gold)
+    private void UpdateGrapeLabel(int gold)
     {
-        _goldLabel.Text = "Gold : " + gold.ToString("00");
+        _grapeLabel.Text = gold.ToString("0000");
     }
     
     
-    private void UpdateGemLabel(int score)
+    private void UpdateCornLabel(int score)
     {
-        _goldLabel.Text = "Gems : " + score.ToString("00");
+        _cornLabel.Text = score.ToString("0000");
     }
 }

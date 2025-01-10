@@ -1,21 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://dx3fd256t0700"]
+[gd_scene load_steps=10 format=3 uid="uid://dx3fd256t0700"]
 
 [ext_resource type="Script" path="res://Scripts/UI/MainUi.cs" id="1_h42yt"]
 [ext_resource type="PackedScene" uid="uid://dfjydclnjqh47" path="res://Nodes/UI/TeamGlobalContainer.tscn" id="2_susmh"]
+[ext_resource type="Texture2D" uid="uid://v5pdahduyehj" path="res://Sprites/WhiteSquare.png" id="3_8741h"]
+[ext_resource type="Texture2D" uid="uid://cr6g2cw31g5y0" path="res://Sprites/T_Corn.png" id="4_brhfp"]
+[ext_resource type="Texture2D" uid="uid://qolc5d35niji" path="res://Sprites/T_Grapes.png" id="5_85qby"]
+[ext_resource type="Texture2D" uid="uid://clbgkotsgqh3q" path="res://Sprites/T_Peas.png" id="6_f4k3j"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6mogv"]
 font_size = 44
-font_color = Color(0.42855, 0.422629, 0.763543, 1)
+font_color = Color(0.960784, 0.913725, 0.32549, 1)
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_tj433"]
 font_size = 44
-font_color = Color(1, 0.445456, 0.734486, 1)
+font_color = Color(0.6, 0.443137, 0.741176, 1)
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
-[node name="Control" type="Control" node_paths=PackedStringArray("_goldLabel", "_gemLabel")]
+[sub_resource type="LabelSettings" id="LabelSettings_ja0gb"]
+font_size = 44
+font_color = Color(0.494118, 0.827451, 0.129412, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" node_paths=PackedStringArray("_grapeLabel", "_peasLabel", "_cornLabel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,23 +33,78 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_h42yt")
-_goldLabel = NodePath("VBoxContainer/Label")
-_gemLabel = NodePath("VBoxContainer/Label2")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-offset_right = 202.0
-offset_bottom = 126.0
-
-[node name="Label" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "Score : 00"
-label_settings = SubResource("LabelSettings_6mogv")
-
-[node name="Label2" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "Gems : 00"
-label_settings = SubResource("LabelSettings_tj433")
+_grapeLabel = NodePath("Control/HBoxContainer/GrapeContainer/GrapeLabel")
+_peasLabel = NodePath("Control/HBoxContainer/PeasContainer/PeasLabel")
+_cornLabel = NodePath("Control/HBoxContainer/CornContainer/CornLabel")
 
 [node name="TeamGlobalContainer" parent="." instance=ExtResource("2_susmh")]
 layout_mode = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 63.985
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+modulate = Color(0.364706, 0.364706, 0.364706, 0.815686)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_8741h")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 145
+alignment = 1
+
+[node name="CornContainer" type="HBoxContainer" parent="Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="CornTex" type="TextureRect" parent="Control/HBoxContainer/CornContainer"]
+layout_mode = 2
+texture = ExtResource("4_brhfp")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="CornLabel" type="Label" parent="Control/HBoxContainer/CornContainer"]
+layout_mode = 2
+text = "0000"
+label_settings = SubResource("LabelSettings_6mogv")
+
+[node name="GrapeContainer" type="HBoxContainer" parent="Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="GrapeTex" type="TextureRect" parent="Control/HBoxContainer/GrapeContainer"]
+layout_mode = 2
+texture = ExtResource("5_85qby")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="GrapeLabel" type="Label" parent="Control/HBoxContainer/GrapeContainer"]
+layout_mode = 2
+text = "0000"
+label_settings = SubResource("LabelSettings_tj433")
+
+[node name="PeasContainer" type="HBoxContainer" parent="Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="PeasTex" type="TextureRect" parent="Control/HBoxContainer/PeasContainer"]
+layout_mode = 2
+texture = ExtResource("6_f4k3j")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="PeasLabel" type="Label" parent="Control/HBoxContainer/PeasContainer"]
+layout_mode = 2
+text = "0000"
+label_settings = SubResource("LabelSettings_ja0gb")
