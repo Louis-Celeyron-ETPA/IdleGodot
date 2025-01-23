@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck1nt66r081i0"
-path="res://.godot/imported/T_D_GoldenEye.png-4f14825c4a375b4537d4b444b8218629.ctex"
+uid="uid://dptyckbnb42xb"
+path="res://.godot/imported/T_Honk (3).png-b101fb319c119a96ad0cd56a848adc69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ducks/T_D_GoldenEye.png"
-dest_files=["res://.godot/imported/T_D_GoldenEye.png-4f14825c4a375b4537d4b444b8218629.ctex"]
+source_file="res://Sprites/Honk/T_Honk (3).png"
+dest_files=["res://.godot/imported/T_Honk (3).png-b101fb319c119a96ad0cd56a848adc69.ctex"]
 
 [params]
 

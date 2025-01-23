@@ -7,6 +7,8 @@
 resource_name = "Witch Duck"
 script = ExtResource("2_t6l5d")
 BaseLove = 12
+BaseRun = 50
 Sprite = ExtResource("1_ls63y")
+RunRate = 0.2
 GoldAmount = 63
 _events = Array[Object]([])
