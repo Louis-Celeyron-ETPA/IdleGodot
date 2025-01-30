@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using Godot.Collections;
 
 public partial class DuckOnGame : StaticBody2D
 {
@@ -8,6 +9,7 @@ public partial class DuckOnGame : StaticBody2D
     [Export] private TextureProgressBar _loveBar, _runBar;
     [Export] private Sprite2D _sprite;
     [Export] private Timer _runTimer;
+    [Export] private Array<AnimLauncher> _animLaunchers;
 
     private ClickManager _clickManager;
     private GoldAndInventoryManager _goldAndInventoryManager;
@@ -25,7 +27,6 @@ public partial class DuckOnGame : StaticBody2D
         _clickManager.OnLoveAutoRaised += RiseLove;
         
         _duckManager.OnDuckLoaded += InitializeDuck;
-        _duckManager.GenerateDuck();
     }
 
     private void OnInputEvent(Node viewport, InputEvent @event, long shapeidx)
@@ -54,12 +55,14 @@ public partial class DuckOnGame : StaticBody2D
 
     private void RiseLove(int amount)
     {
+        _animLaunchers.PickRandom().PlayAnimation();
         UpdateLove(_currentLove+amount);
     }
     private void UpdateLove(int newAmount)
     {
         _currentLove = newAmount;
         _loveBar.Value = ((double)_currentLove / (double)CurrentDuck.BaseLove) * 100.0;
+        
         if (_currentLove >= CurrentDuck.BaseLove)
         {
             OnLoveMaxed();
@@ -73,6 +76,7 @@ public partial class DuckOnGame : StaticBody2D
     {
         _currentRun = amount;
         _runBar.Value =  ((double)_currentRun / (double)CurrentDuck.BaseRun) * 100.0;
+
         if (_currentRun >= CurrentDuck.BaseRun)
         {
             OnRunMaxed();            

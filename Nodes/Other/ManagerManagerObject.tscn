@@ -22,6 +22,12 @@ _autoTimer = NodePath("Timer")
 [node name="DuckManager" type="Node" parent="."]
 script = ExtResource("5_o0d17")
 _availableDucks = Array[Object]([ExtResource("6_6sgxk"), ExtResource("7_cuptk"), ExtResource("8_8tbpv"), ExtResource("9_8fu6q")])
+_currentDuck = ExtResource("8_8tbpv")
+
+[node name="DuckManager2" type="Node" parent="."]
+script = ExtResource("5_o0d17")
+_availableDucks = Array[Object]([ExtResource("6_6sgxk"), ExtResource("7_cuptk"), ExtResource("8_8tbpv"), ExtResource("9_8fu6q")])
+_currentDuck = ExtResource("8_8tbpv")
 
 [node name="GoldAndInventoryManager" type="Node" parent="."]
 script = ExtResource("7_4mn8l")

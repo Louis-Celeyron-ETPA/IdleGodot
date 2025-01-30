@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://o7kldktvyv3u"]
+
+[ext_resource type="Texture2D" uid="uid://jn2ul5os6ep4" path="res://Sprites/Honk/T_Coin (1).png" id="1_7dnge"]
+[ext_resource type="Script" path="res://Scripts/Other/AnimLauncher.cs" id="2_rk3hn"]
+[ext_resource type="Animation" uid="uid://byowvxjhvpo8u" path="res://Animation/Honk_Anim.tres" id="3_mlqis"]
+
+[sub_resource type="Animation" id="Animation_vcixu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jh7kg"]
+resource_name = "new_animation"
+length = 0.55
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0.25), Vector2(0.25, 0.25)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.333333, 0.533333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fhb0t"]
+_data = {
+"RESET": SubResource("Animation_vcixu"),
+"anim_Honk": SubResource("Animation_jh7kg")
+}
+
+[node name="HonkAnim" type="Sprite2D" node_paths=PackedStringArray("_animationPlayer")]
+texture = ExtResource("1_7dnge")
+offset = Vector2(-518, 0)
+script = ExtResource("2_rk3hn")
+_animation = ExtResource("3_mlqis")
+_animationPlayer = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fhb0t")
+}
+playback_auto_capture = false
