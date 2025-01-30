@@ -16,7 +16,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1, 1)]
+"values": [Vector2(0.25, 0.25)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -28,7 +28,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_jh7kg"]
@@ -66,6 +66,8 @@ _data = {
 }
 
 [node name="HonkAnim" type="Sprite2D" node_paths=PackedStringArray("_animationPlayer")]
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_7dnge")
 offset = Vector2(-518, 0)
 script = ExtResource("2_rk3hn")

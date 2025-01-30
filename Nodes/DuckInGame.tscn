@@ -74,11 +74,15 @@ texture = ExtResource("4_i3upl")
 autostart = true
 
 [node name="HonkAnim" parent="." instance=ExtResource("5_dpgja")]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(-55, -40)
+scale = Vector2(0.25, 0.25)
 _textureArray = Array[Texture2D]([ExtResource("6_sa5mi"), ExtResource("7_v8y67"), ExtResource("8_cd8f4"), ExtResource("9_vvg44"), ExtResource("10_s3bm3"), ExtResource("11_nfkot")])
 
 [node name="HonkAnim2" parent="." instance=ExtResource("5_dpgja")]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(156, -40)
+scale = Vector2(0.25, 0.25)
 offset = Vector2(518, 0)
 _textureArray = Array[Texture2D]([ExtResource("12_74ceo"), ExtResource("7_v8y67"), ExtResource("13_iancm"), ExtResource("14_b0smo"), ExtResource("11_nfkot"), ExtResource("15_rdwyn"), ExtResource("16_eemdj")])
 
