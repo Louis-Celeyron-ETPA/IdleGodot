@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Duck" load_steps=5 format=3 uid="uid://c5ifhj8kcw0vw"]
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://c5ifhj8kcw0vw"]
 
-[ext_resource type="Texture2D" uid="uid://gufosafuxtkv" path="res://Sprites/Ducks/T_D_Regular.png" id="1_a71nd"]
 [ext_resource type="Script" path="res://Scripts/Ressources/Events/CE_AutoClick.cs" id="2_bs478"]
 [ext_resource type="Script" path="res://Scripts/Ressources/Duck.cs" id="2_l1ww2"]
+
+[sub_resource type="Resource" id="Resource_qrgcw"]
+metadata/__load_path__ = "res://Sprites/Ducks/T_D_Regular.png"
 
 [sub_resource type="Resource" id="Resource_gaohh"]
 script = ExtResource("2_bs478")
@@ -12,7 +14,7 @@ resource_name = "Regular Duck"
 script = ExtResource("2_l1ww2")
 BaseLove = 60
 BaseRun = 50
-Sprite = ExtResource("1_a71nd")
+Sprite = SubResource("Resource_qrgcw")
 RunRate = 0.2
 GoldAmount = 5
 _events = Array[Object]([SubResource("Resource_gaohh")])

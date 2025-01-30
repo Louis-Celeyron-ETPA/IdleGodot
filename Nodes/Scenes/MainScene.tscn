@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://4nrwx01qy5wp" path="res://Nodes/DuckInGame.tscn" id="2_1pg1q"]
 
 [node name="MainScene" type="Node2D"]
+position = Vector2(0, 82)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
