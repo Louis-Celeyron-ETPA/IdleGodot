@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ofbsei4u5n0x"
-path="res://.godot/imported/Prout.png-589c681177dece36543814e26e7786e6.ctex"
+uid="uid://dkcb0shhfbg7k"
+path="res://.godot/imported/T_B_ClassicQuackers.png-1abbb6826ffbb5ae049ac6ef7f3a1c2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Prout.png"
-dest_files=["res://.godot/imported/Prout.png-589c681177dece36543814e26e7786e6.ctex"]
+source_file="res://Sprites/BoosterPacks/T_B_ClassicQuackers.png"
+dest_files=["res://.godot/imported/T_B_ClassicQuackers.png-1abbb6826ffbb5ae049ac6ef7f3a1c2a.ctex"]
 
 [params]
 

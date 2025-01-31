@@ -1,10 +1,8 @@
-[gd_resource type="Resource" load_steps=5 format=3 uid="uid://ckju26rqmy5c3"]
+[gd_resource type="Resource" script_class="Duck" load_steps=5 format=3 uid="uid://ckju26rqmy5c3"]
 
+[ext_resource type="Texture2D" uid="uid://ck1nt66r081i0" path="res://Sprites/Ducks/T_D_Goldeneye.png" id="1_3sio5"]
 [ext_resource type="Script" path="res://Scripts/Ressources/Events/CE_AddPower.cs" id="2_47pjf"]
 [ext_resource type="Script" path="res://Scripts/Ressources/Duck.cs" id="2_dlgum"]
-
-[sub_resource type="Resource" id="Resource_t0n58"]
-metadata/__load_path__ = "res://Sprites/Ducks/T_D_Goldeneye.png"
 
 [sub_resource type="Resource" id="Resource_ccbag"]
 script = ExtResource("2_47pjf")
@@ -15,7 +13,7 @@ resource_name = "Goldeneye"
 script = ExtResource("2_dlgum")
 BaseLove = 15
 BaseRun = 50
-Sprite = SubResource("Resource_t0n58")
+Sprite = ExtResource("1_3sio5")
 RunRate = 0.2
 GoldAmount = 10
 _events = Array[Object]([SubResource("Resource_ccbag")])
